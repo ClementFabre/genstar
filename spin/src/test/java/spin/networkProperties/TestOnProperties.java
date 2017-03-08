@@ -8,9 +8,9 @@ import gospl.algo.generator.ISyntheticGosplPopGenerator;
 import gospl.algo.generator.UtilGenerator;
 import spin.SpinPopulation;
 import spin.algo.factory.SpinNetworkFactory;
-import spin.algo.factory.StatFactory;
 import spin.interfaces.ENetworkGenerator;
 import spin.objects.SpinNetwork;
+import useless.StatFactory;
 
 public class TestOnProperties {
 

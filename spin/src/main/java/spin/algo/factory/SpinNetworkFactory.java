@@ -12,10 +12,13 @@ import spin.interfaces.ENetworkGenerator;
 import spin.objects.SpinNetwork;
 
 /** Propose de générer des réseaux 
- *
+ * Si le réseau est non orienté, chaque edges n'est mis qu'une fois, donc pas d'aller retour implicite. 
+ * TODO [stage] depuis une population obtenir un SPinPop avec le network correspondant
  */
 public class SpinNetworkFactory {
 	
+	// SpinNetwork est le réseau courant sur la population, donc pas plusieurs type de SpinNetwork
+	// contrairement a GraphStreamFactory possédant plusieurs graphes 
 	private SpinNetwork network;
 	
 	// Singleton
@@ -43,7 +46,7 @@ public class SpinNetworkFactory {
 		if(typeGenerator.equals(ENetworkGenerator.Random))	
 			network = new RandomNetworkGenerator().generateNetwork(population, .1);
 		if(typeGenerator.equals(ENetworkGenerator.Regular))	
-			network = new RegularNetworkGenerator().generateNetwork(population, 2);
+			network = new RegularNetworkGenerator().generateNetwork(population, 4);
 		if(typeGenerator.equals(ENetworkGenerator.ScaleFree))	
 			network = new SFNetworkGenerator().generateNetwork(population);
 		
