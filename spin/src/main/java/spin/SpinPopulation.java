@@ -20,7 +20,7 @@ import spin.objects.SpinNetwork;
  */
 public class SpinPopulation implements IPopulation<APopulationEntity, APopulationAttribute, APopulationValue> {
 
-	// Network associé a la population.
+	// Network associé a la population. pljkpok
 	private SpinNetwork network;
 
 	// Interface qui permet d'avoir acces aux propriétés du réseau associé a la population.
